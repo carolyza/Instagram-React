@@ -6,35 +6,28 @@ import Stories from "stories.js";
 import Copyright from "copyright.js";
 import Fundo from "fundo-mobile.js";
 import Icones from "icones.js";
-import IconesMobile from "icones-mobile.js";
+import Navbar from "navbar.js";
 
 
 export default function App(){
     return(
-        <div class="navbar">
-        <div class="container">
-          <Logo/>
-  
-          <Icones/>
+ <div>
+  <Navbar/>
+    <div class = "corpo">
 
-          <IconesMobile/>
+        <div class = "esquerda">
+            <Stories/>
+            <Posts/>
         </div>
-      </div>
 
-      <div class="corpo">
-        <div class="esquerda">
-         <Stories/>
+      <Sidebar/>
 
-          <Posts/>
-
-        <Sidebar/>
-
-          <Links/>
-
-         <Copyright/>
-
-      <Fundo/>
     </div>
-</div>
-    )
+
+  <Links/>
+  <Copyright/>
+  <Fundo/>
+
+ </div> 
+     )
 }

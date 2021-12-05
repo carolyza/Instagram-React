@@ -1,81 +1,29 @@
-export default function Story(){
+import Icones from "icones.js";
+import Story from "story.js";
+
+
+
+export default function Stories(){
+const perfis = ["9gag",
+"meowed",
+"barked",
+"nathanwpylestrangeplanet",
+"wawawicomics",
+"respondeai",
+"filomoderna",
+"memeriagourmet",
+];
+
+
     return(
-        <div class="stories">
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/9gag.svg" />
-              </div>
-              <div class="usuario">
-                9gag
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/meowed.svg" />
-              </div>
-              <div class="usuario">
-                meowed
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/barked.svg" />
-              </div>
-              <div class="usuario">
-                barked
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/nathanwpylestrangeplanet.svg" />
-              </div>
-              <div class="usuario">
-                nathanwpylestrangeplanet
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/wawawicomics.svg" />
-              </div>
-              <div class="usuario">
-                wawawicomics
-              </div>
-            </div>
-            
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/respondeai.svg" />
-              </div>
-              <div class="usuario">
-                respondeai
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/filomoderna.svg" />
-              </div>
-              <div class="usuario">
-                filomoderna
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="assets/img/memeriagourmet.svg" />
-              </div>
-              <div class="usuario">
-                memeriagourmet
-              </div>
-            </div>
-            <div class="setinha">
-              <ion-icon name="chevron-forward-circle"></ion-icon>
-            </div>
-            </div>
+            <div class="stories">
+      {perfis.map((perfil) => (
+        <Story name={perfil} />
+      ))}
+      <div class="setinha">
+        <Icones name="chevron-forward-circle" />
+      </div>
+    </div>
 
     )
 }

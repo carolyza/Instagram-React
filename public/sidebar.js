@@ -1,4 +1,15 @@
+import Sugestao from "sugestao.js";
+
 export default function Sidebar(){
+  const sugestoes=[
+    {usuario = "bad.vibes.memes",razao="Segue Você"},
+{usuario="chibirdart", razao="Segue Você"},
+{usuario="razoesparaacreditar", razao="Novo no Instagram"},
+{usuario="adorable_animals", razao="Segue Você"},
+{usuario="smallcutecats", razao="Segue Você"}
+]
+
+
     return(
         <div class="sidebar">
           <div class="usuario">
@@ -15,66 +26,15 @@ export default function Sidebar(){
               <div>Ver tudo</div>
             </div>
 
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/bad.vibes.memes.svg" />
-                <div class="texto">
-                  <div class="nome">bad.vibes.memes</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/chibirdart.svg" />
-                <div class="texto">
-                  <div class="nome">chibirdart</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/razoesparaacreditar.svg" />
-                <div class="texto">
-                  <div class="nome">razoesparaacreditar</div>
-                  <div class="razao">Novo no Instagram</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/adorable_animals.svg" />
-                <div class="texto">
-                  <div class="nome">adorable_animals</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
-
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/smallcutecats.svg" />
-                <div class="texto">
-                  <div class="nome">smallcutecats</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
+            
+            {sugestoes.map((sugestao)=>(
+                <Sugestao usuario={sugestao.usuario}
+                razao= {sugestao.razao}
+                />
+            ))}
+            <div class="seguir">Seguir</div>
             </div>
           </div>
-          </div>
+          
     )
 }
