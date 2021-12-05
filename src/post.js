@@ -1,11 +1,13 @@
-import Icones from "icones.js";
+import Icones from "./icones.js";
 
 export default function Post(props){
+const icones =["heart-outline","chatbubble-outline","paper-plane-outline"];
+
     return(
         <div class="post">
               <div class="topo">
                 <div class="usuario">
-                  <img src={`assets/img/${props.perfil}.svg`}/>
+                  <img src={`./assets/img/${props.perfil}.svg`}/>
                   {props.perfil}
                 </div>
                 <div class="acoes">
@@ -13,7 +15,7 @@ export default function Post(props){
                 </div>
               </div>
               <div class="conteudo">
-                <img src={`assets/img/${props.content}.svg`} />
+                <img src={`./assets/img/${props.content}.svg`} />
               </div>
 
               <div class="fundo">
@@ -29,7 +31,7 @@ export default function Post(props){
         </div>
 
                 <div class="curtidas">
-                  <img src={`assets/img/${props.likeOne}.svg`} />
+                  <img src={`./assets/img/${props.likeOne}.svg`} />
                   <div class="texto">
                     Curtido por <strong>{props.likeOne}</strong> e <strong>{props.numberLike}</strong>
                   </div>

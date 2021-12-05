@@ -1,5 +1,5 @@
-import Icones from "icones.js";
-import Logo from "Logo.js";
+import Icones from "./icones.js";
+import Logo from "./Logo.js";
 
 export default function Navbar() {
   const icons = [

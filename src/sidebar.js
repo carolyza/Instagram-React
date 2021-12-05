@@ -1,19 +1,21 @@
-import Sugestao from "sugestao.js";
+import Sugestao from "./sugestao.js";
+import Links from "./links.js"
+import Copyright from "./copyright.js";
 
 export default function Sidebar(){
   const sugestoes=[
-    {usuario = "bad.vibes.memes",razao="Segue Você"},
-{usuario="chibirdart", razao="Segue Você"},
-{usuario="razoesparaacreditar", razao="Novo no Instagram"},
-{usuario="adorable_animals", razao="Segue Você"},
-{usuario="smallcutecats", razao="Segue Você"}
+    {usuario : "bad.vibes.memes",razao:"Segue Você"},
+{usuario:"chibirdart", razao:"Segue Você"},
+{usuario:"razoesparaacreditar", razao:"Novo no Instagram"},
+{usuario:"adorable_animals", razao:"Segue Você"},
+{usuario:"smallcutecats", razao:"Segue Você"}
 ]
 
 
     return(
         <div class="sidebar">
           <div class="usuario">
-            <img src="assets/img/catanacomics.svg" />
+            <img src="./assets/img/catanacomics.svg" />
             <div class="texto">
               <strong>catanacomics</strong>
               Catana
@@ -34,7 +36,10 @@ export default function Sidebar(){
             ))}
             <div class="seguir">Seguir</div>
             </div>
+            <Links/>
+            <Copyright/>
           </div>
+          
           
     )
 }

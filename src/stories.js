@@ -1,5 +1,5 @@
-import Icones from "icones.js";
-import Story from "story.js";
+import Icones from "./icones.js";
+import Story from "./story.js";
 
 
 

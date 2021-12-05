@@ -1,4 +1,4 @@
-import Icones from "icones.js";
+import Icones from "./icones.js";
 
 export default function Fundo() {
   const icones = [
